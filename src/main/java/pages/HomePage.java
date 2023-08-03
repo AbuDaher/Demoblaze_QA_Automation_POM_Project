@@ -30,11 +30,6 @@ public class HomePage extends BasePage{
         return aboutUs.isDisplayed();
     }
 
-    public void ScrollToAboutUs(){
-
-//        Utils.scrollToElement(, driver);
-    }
-
     public void clickMonitorButton(){
         monitorButton.click();
     }

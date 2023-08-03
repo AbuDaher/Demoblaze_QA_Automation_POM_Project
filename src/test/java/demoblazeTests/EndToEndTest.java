@@ -22,7 +22,6 @@ public class EndToEndTest extends BaseTest{
         monitorpage = new MonitorsPage(driver);
         productPage = new ProductPage(driver);
         logInPage = new LogInPage(driver);
-
     }
 
     @Test
@@ -34,7 +33,7 @@ public class EndToEndTest extends BaseTest{
         String actualMessage = this.logInPage.isMessageConfirmationDisplayed();
         Assert.assertTrue(actualMessage.contains(Constants.WELCOME_MESSAGE));
         homePage.clickMonitorButton();
-        Utils.waitInSeconds(1);
+        Utils.waitInSeconds(2);
         monitorpage.clickAsusMonitorLink();
         Utils.waitInSeconds(1);
         productPage.clickAddToCartCutton();
@@ -44,10 +43,6 @@ public class EndToEndTest extends BaseTest{
         Utils.acceptAlert(driver);
         Utils.waitInSeconds(1);
         cart.clickCartButton();
-        Utils.waitInSeconds(1);
         homePage.clickPlaceOrderButton();
     }
-
-
-
 }

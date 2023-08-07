@@ -2,6 +2,7 @@ package pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import utils.Utils;
 
 public class HomePage extends BasePage{
 
@@ -32,7 +33,7 @@ public class HomePage extends BasePage{
 
     public void ScrollToAboutUs(){
 
-//        Utils.scrollToElement(, driver);
+        Utils.scrollToElement(aboutUs, driver);
     }
 
     public void clickMonitorButton(){
